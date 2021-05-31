@@ -29,7 +29,7 @@ async function go() {
     );
     const info = await google.youtube('v3').videos.list({
       key: process.env.YOUTUBE_TOKEN,
-      part: 'statistics,id',
+      part: 'statistics',
       id: video.id.videoId,
     });
     const { statistics } = info.data.items[0];
